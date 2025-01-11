@@ -73,7 +73,7 @@ conda install -c conda-forge dlib (only for face detection or cropping with dlib
 #### 1. Preparing Dataset
 
 - Download training dataset: [FFHQ](https://github.com/NVlabs/ffhq-dataset)
-- Resize to 512$\times$512 resolution
+- Resize to 512 $\times$ 512 resolution
 
 #### 2. Training InterLCM
 
