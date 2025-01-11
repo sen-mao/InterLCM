@@ -6,7 +6,7 @@ from basicsr.archs.vqgan_arch import normalize, swish
 
 from basicsr.utils.registry import ARCH_REGISTRY
 
-class Upsample_adapter(nn.Module):
+class Upsample_visual_encoder(nn.Module):
     def __init__(self, in_channels):
         super().__init__()
         self.conv = nn.Conv1d(in_channels, in_channels, kernel_size=3, stride=1, padding=1)
@@ -106,7 +106,7 @@ class AttnBlock1D(nn.Module):
         return x+h_
 
 @ARCH_REGISTRY.register()
-class Adaptor(nn.Module):
+class VisualEncoder(nn.Module):
     def __init__(self, nf, emb_dim, ch_mult, res_blocks, img_size, out_channels=77):
         super().__init__()
         self.nf = nf
@@ -115,13 +115,13 @@ class Adaptor(nn.Module):
         self.num_res_blocks = res_blocks
         self.resolution = img_size
         self.in_channels = emb_dim
-        self.out_channels = out_channels  # the size of text embedding for LCM is (77, 178)
+        self.out_channels = out_channels  # the size of text embedding for LCM is (77, 768)
         block_in_ch = self.nf * self.ch_mult[-1]
 
         blocks = []
         # initial conv
         blocks.append(nn.Conv1d(self.in_channels, block_in_ch, kernel_size=3, stride=1, padding=1))  # (B, N, feature size): (B, 197, 768) -> (B, 512, 768)
-        blocks.append(Upsample_adapter(block_in_ch))  # (B, N, feature size): (B, 512, 768) -> (B, 512, 256)
+        blocks.append(Upsample_visual_encoder(block_in_ch))  # (B, N, feature size): (B, 512, 768) -> (B, 512, 256)
 
         # non-local attention block
         blocks.append(ResBlock1D(block_in_ch, block_in_ch))  # (B, 512, 256) -> (B, 512, 256)
@@ -139,7 +139,7 @@ class Adaptor(nn.Module):
                     blocks.append(AttnBlock1D(block_in_ch))  # (B, 512, 256) -> (B, 512, 256)
 
             if i != 0:
-                blocks.append(Upsample_adapter(block_in_ch))
+                blocks.append(Upsample_visual_encoder(block_in_ch))
 
         blocks.append(normalize(block_in_ch))
         blocks.append(nn.Conv1d(block_in_ch, self.out_channels, kernel_size=3, stride=1, padding=1))

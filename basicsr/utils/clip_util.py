@@ -1,14 +1,14 @@
 import torch
 import torch.nn as nn
-from diffusers import AutoencoderKL as vae
-import copy
+# from diffusers import AutoencoderKL as vae
+# import copy
 from clip.model import Transformer, LayerNorm
-import clip
-import torchvision.transforms as transforms
+# import clip
+# import torchvision.transforms as transforms
 
 import os
 import certifi
-import urllib
+# import urllib
 os.environ["REQUESTS_CA_BUNDLE"] = certifi.where()
 os.environ["SSL_CERT_FILE"] = certifi.where()
 # result = urllib.request.urlopen('https://www.example.com')

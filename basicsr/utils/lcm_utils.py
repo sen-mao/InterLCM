@@ -94,8 +94,8 @@ def retrieve_timesteps(
 # if using other versions of diffusers, make slight adjustments to register_lcm_forward based on
 # __call__ function of diffusers.pipelines.latent_consistency_models.pipeline_latent_consistency_text2img.LatentConsistencyModelPipline
 
-def register_lcm_forward(model, controlnet):
-    def lcm_forward(self, controlnet):
+def register_lcm_forward(model, spatial_encoder):
+    def lcm_forward(self, spatial_encoder):
         # @torch.no_grad()
         @replace_example_docstring(EXAMPLE_DOC_STRING)
         def forward(
@@ -324,8 +324,8 @@ def register_lcm_forward(model, controlnet):
                         model_pred = torch.zeros_like(latents)
                         denoised = latents
                     else:
-                        # controlnet
-                        down_block_res_samples, mid_block_res_sample = controlnet(
+                        # spatial_encoder
+                        down_block_res_samples, mid_block_res_sample = spatial_encoder(
                             latents,
                             t,
                             encoder_hidden_states=prompt_embeds,
@@ -397,7 +397,7 @@ def register_lcm_forward(model, controlnet):
             return StableDiffusionPipelineOutput(images=image, nsfw_content_detected=has_nsfw_concept)
         return forward
     if model.__class__.__name__ == 'LatentConsistencyModelPipeline':
-        model.forward = lcm_forward(model, controlnet)
+        model.forward = lcm_forward(model, spatial_encoder)
 
 
 from typing import Tuple
