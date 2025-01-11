@@ -41,43 +41,34 @@
 [//]: # (<img src="assets/inpainting_result1.png" width="400px"/> <img src="assets/inpainting_result2.png" width="400px"/>)
 
 
-[//]: # ()
-[//]: # (### Dependencies and Installation)
 
-[//]: # ()
-[//]: # (- Pytorch >= 1.7.1)
+### Dependencies and Installation
 
-[//]: # (- CUDA >= 10.1)
+```
 
-[//]: # (- Other required packages in `requirements.txt`)
+# git clone this repository
 
-[//]: # (```)
+git clone https://github.com/sen-mao/InterLCM.git
 
-[//]: # (# git clone this repository)
+cd InterLCM
 
-[//]: # (git clone https://github.com/sczhou/CodeFormer)
 
-[//]: # (cd CodeFormer)
+# create new anaconda env
 
-[//]: # ()
-[//]: # (# create new anaconda env)
+conda create -n interlcm python=3.8 -y
 
-[//]: # (conda create -n codeformer python=3.8 -y)
+conda activate interlcm
 
-[//]: # (conda activate codeformer)
 
-[//]: # ()
-[//]: # (# install python dependencies)
+# install python dependencies
 
-[//]: # (pip3 install -r requirements.txt)
+pip3 install -r requirements.txt
 
-[//]: # (python basicsr/setup.py develop)
+conda install -c conda-forge dlib (only for face detection or cropping with dlib)
 
-[//]: # (conda install -c conda-forge dlib &#40;only for face detection or cropping with dlib&#41;)
+```
 
-[//]: # (```)
-
-[//]: # (<!-- conda install -c conda-forge dlib -->)
+<!-- conda install -c conda-forge dlib -->
 
 [//]: # ()
 [//]: # (### Quick Inference)
