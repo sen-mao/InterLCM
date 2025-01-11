@@ -1,2 +1,10 @@
 torch==1.13.1
 opencv-python
+scipy
+lpips
+openai-clip
+diffusers==0.28.2
+tensorboard
+six
+transformers
+accelerate
