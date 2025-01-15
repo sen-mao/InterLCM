@@ -311,4 +311,4 @@ class CodeFormerJointModel(SRModel):
             self.save_network(self.visual_encoder, 'visual_encoder', current_iter)
             self.save_network(self.visual_encoder, 'spatial_encoder', current_iter)
         self.save_network(self.net_d, 'net_d', current_iter)
-        self.save_training_state(epoch, current_iter)
+        # self.save_training_state(epoch, current_iter)
