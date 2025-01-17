@@ -220,7 +220,7 @@ def train_pipeline(root_path):
             # save image
             if opt['rank'] == 0 and current_iter % opt['logger']['print_freq'] == 0 or current_iter == 1:
                 iter = str(current_iter).zfill(8)
-                save_path = f"{os.path.dirname(os.getcwd())}/experiments/{opt['name']}/images"
+                save_path = f"experiments/{opt['name']}/images"
                 if not os.path.exists(save_path):
                     os.makedirs(save_path, exist_ok=True)
                 save_images(model.output.detach(), f'{save_path}/{iter}iter_lcm_output_.png')
