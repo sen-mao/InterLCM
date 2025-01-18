@@ -88,10 +88,10 @@ def main():
     # LCM
     parser.add_argument('--num_inference_steps', type=int, default=4, help='T for lcm')
     parser.add_argument('--visual_encoder_path', type=str,
-                        default='weights/InterLCM/Step/visual_encoder.pth',
+                        default='weights/InterLCM/Step/visual_encoder_15000.pth',
                         help='visual_encoder checkpoint')
     parser.add_argument('--spatial_encoder_path', type=str,
-                        default='weights/InterLCM/Step/spatial_encoder.pth',
+                        default='weights/InterLCM/Step/spatial_encoder_15000.pth',
                         help='spatial_encoder checkpoint')
     parser.add_argument('--sd_path', type=str,
                         default='/data/runwayml/stable-diffusion-v1-5',
