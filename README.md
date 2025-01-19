@@ -68,15 +68,14 @@ conda install -c conda-forge dlib (only for face detection or cropping with dlib
 
 #### 1. 🧑🏻 Face Restoration
 
-- For cropped and aligned faces (512x512)
-
-```shell
+```
+# For cropped and aligned faces (512x512)
 python inference_InterLCM.py --has_aligned --num_inference_steps 4 \
-                             --input_path inputs/gray_faces \
-                             --output_path results/gray_faces
+                             --input_path inputs/cropped_faces \
+                             --output_path results/cropped_faces
 ```
 
-- Whole Image Enhancement
+#### 2. 📷 Whole Image Enhancement
 
 ```
 # For whole image
