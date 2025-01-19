@@ -103,7 +103,7 @@ def main():
     parser.add_argument(
         "--colorfix_type",
         type=str,
-        default="nofix",
+        default="wavelet",
         help="Color fix type to adjust the color of reconstructed HR result according to LR input: "
              "adain; wavelet (used in paper); nofix",
     )
@@ -342,12 +342,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# python inference_InterLCM.py --has_aligned --num_inference_steps 4 \
-#                              --input_path /data/20241113_InterLCM_Release/InterLCM/inputs/gray_faces \
-#                              --output_path results/gray_faces --colorfix_type wavelet
-
-# python inference_InterLCM.py --num_inference_steps 4\
-#                              --input_path /data/20241113_InterLCM_Release/InterLCM/inputs/whole_imgs \
-#                              --output_path results/whole_imgs --bg_upsampler realesrgan \
-#                              --colorfix_type wavelet
