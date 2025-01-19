@@ -19,7 +19,7 @@
 
 
 ### Update
-- **2025.01.15**: Release [pre-trained models](https://github.com/sen-mao/InterLCM/releases/tag/v0.1.0) and inference code. 😀
+- **2025.01.15**: Release the [pre-trained models](https://github.com/sen-mao/InterLCM/releases/tag/v0.1.0) and inference code. 😀
 - **2024.12.24**: This repo is created.
 
 #### Face Restoration (synthetic of CelebA-Test)
