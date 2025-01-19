@@ -65,7 +65,6 @@ conda install -c conda-forge dlib (only for face detection or cropping with dlib
 
 ### Testing:
 
----
 
 #### 1. 🧑🏻 Face Restoration
 
@@ -92,8 +91,6 @@ python inference_InterLCM.py --num_inference_steps 4 \
 ---
 
 ### Training:
-
----
 
 #### 1. Preparing Dataset
 
