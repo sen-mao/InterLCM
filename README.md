@@ -75,7 +75,7 @@ python inference_InterLCM.py --has_aligned --num_inference_steps 4 \
                              --output_path results/cropped_faces
 ```
 
-#### 2. 📷 Whole Image Enhancement
+#### 2. 🖼️ Whole Image Enhancement
 
 ```
 # For whole image
@@ -91,12 +91,12 @@ python inference_InterLCM.py --num_inference_steps 4 \
 
 ### Training:
 
-#### 1. Preparing Dataset
+#### 1. 🧩 Preparing Dataset
 
 - Download training dataset: [FFHQ](https://github.com/NVlabs/ffhq-dataset)
 - Resize to 512 $\times$ 512 resolution
 
-#### 2. Training InterLCM
+#### 2. 🚀 Training InterLCM
 
 - Training Visual Encoder and Spatial Encoder:
   > python -m torch.distributed.launch --nproc_per_node=gpu_num --master_port=4323 basicsr/train.py -opt options/interlcm.yml --launcher pytorch
