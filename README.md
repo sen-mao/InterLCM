@@ -67,7 +67,7 @@ conda install -c conda-forge dlib (only for face detection or cropping with dlib
 
 ---
 
-#### 1. 🧑🏻 Face Restoration (cropped and aligned face)
+#### 1. 🧑🏻 Face Restoration
 
 - For cropped and aligned faces (512x512)
 
@@ -76,6 +76,19 @@ python inference_InterLCM.py --has_aligned --num_inference_steps 4 \
                              --input_path inputs/gray_faces \
                              --output_path results/gray_faces
 ```
+
+- Whole Image Enhancement
+
+```
+# For whole image
+# Add '--bg_upsampler realesrgan' to enhance the background regions with Real-ESRGAN
+# Add '--face_upsample' to further upsample restorated face with Real-ESRGAN
+python inference_InterLCM.py --num_inference_steps 4 \
+                             --input_path inputs/whole_imgs \
+                             --output_path results/whole_imgs \
+                             --bg_upsampler realesrgan
+```
+
 ---
 
 ### Training:
