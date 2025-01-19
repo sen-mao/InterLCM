@@ -19,6 +19,7 @@
 
 
 ### Update
+- **2025.01.15**: Release pre-trained models and inference code. 😀
 - **2024.12.24**: This repo is created.
 
 #### Face Restoration (synthetic of CelebA-Test)
