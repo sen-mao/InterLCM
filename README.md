@@ -88,6 +88,7 @@ python inference_InterLCM.py --num_inference_steps 4 \
                              --bg_upsampler realesrgan
 ```
 
+
 ---
 
 ### Training:
