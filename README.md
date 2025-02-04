@@ -1,7 +1,7 @@
 
 ## Official Implementations "InterLCM: Low-Quality Images as Intermediate States of Latent Consistency Models for Effective Blind Face Restoration" (ICLR'25)
 
-[Project Page](sen-mao.github.io/InterLCM-Page/)
+[Project Page](https://sen-mao.github.io/InterLCM-Page/)
 
 [![Hugging Face (coming soon)](https://img.shields.io/badge/Demo-%F0%9F%A4%97%20Hugging%20Face-blue)](https://github.com/sen-mao/InterLCM) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=sen-mao/InterLCM)
 
