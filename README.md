@@ -1,5 +1,5 @@
 
-## InterLCM: Low-Quality Images as Intermediate States of Latent Consistency Models for Effective Blind Face Restoration
+## Official Implementations "InterLCM: Low-Quality Images as Intermediate States of Latent Consistency Models for Effective Blind Face Restoration" (ICLR'25)
 
 [Project Page](sen-mao.github.io/InterLCM-Page/)
 
