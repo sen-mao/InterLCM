@@ -69,12 +69,25 @@ conda install -c conda-forge dlib (only for face detection or cropping with dlib
 
 ### Testing:
 
+#### Download the CodeFormer pretrained models from [[Releases](https://github.com/sen-mao/InterLCM/releases/tag/v0.1.0)|[Google Drive](https://drive.google.com/drive/folders/1iSYQ-cn6g7kcsTc2UkeGjEyrVmiEx_Ea?usp=sharing)] to the `weights/InterLCM` folder.
 
 #### 1. 🧑🏻 Face Restoration
 
 ```
-# For cropped and aligned faces (512x512)
+# For cropped and aligned faces (512x512) (3-step interlcm reconstruction)
 python inference_InterLCM.py --has_aligned --num_inference_steps 4 \
+                             --visual_encoder_path weights/InterLCM/visual_encoder_3step.pth \
+                             --spatial_encoder_path weights/InterLCM/spatial_encoder_3step.pth \
+                             --input_path inputs/cropped_faces \
+                             --output_path results/cropped_faces
+```
+
+```
+# InterLCM enables 1-step BFR under non-extreme degradation conditions.
+# For cropped and aligned faces (512x512) (1-step interlcm reconstruction)
+python inference_InterLCM.py --has_aligned --num_inference_steps 2 \
+                             --visual_encoder_path weights/InterLCM/visual_encoder_1step.pth \
+                             --spatial_encoder_path weights/InterLCM/spatial_encoder_1step.pth \
                              --input_path inputs/cropped_faces \
                              --output_path results/cropped_faces
 ```
@@ -86,6 +99,8 @@ python inference_InterLCM.py --has_aligned --num_inference_steps 4 \
 # Add '--bg_upsampler realesrgan' to enhance the background regions with Real-ESRGAN
 # Add '--face_upsample' to further upsample restorated face with Real-ESRGAN
 python inference_InterLCM.py --num_inference_steps 4 \
+                             --visual_encoder_path weights/InterLCM/visual_encoder_3step.pth \
+                             --spatial_encoder_path weights/InterLCM/spatial_encoder_3step.pth \
                              --input_path inputs/whole_imgs \
                              --output_path results/whole_imgs \
                              --bg_upsampler realesrgan
