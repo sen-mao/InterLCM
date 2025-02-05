@@ -87,12 +87,12 @@ def main():
     parser.add_argument('--suffix', type=str, default=None, help='Suffix of the restored faces. Default: None')
     parser.add_argument('--save_video_fps', type=float, default=None, help='Frame rate for saving video. Default: None')
     # LCM
-    parser.add_argument('--num_inference_steps', type=int, default=2, help='T for lcm')
+    parser.add_argument('--num_inference_steps', type=int, default=4, help='T for lcm')
     parser.add_argument('--visual_encoder_path', type=str,
-                        default='weights/InterLCM/visual_encoder_1step.pth',
+                        default='weights/InterLCM/visual_encoder_3step.pth',
                         help='visual_encoder checkpoint')
     parser.add_argument('--spatial_encoder_path', type=str,
-                        default='weights/InterLCM/spatial_encoder_1step.pth',
+                        default='weights/InterLCM/spatial_encoder_3step.pth',
                         help='spatial_encoder checkpoint')
     parser.add_argument('--sd_path', type=str,
                         default='/data/runwayml/stable-diffusion-v1-5',
