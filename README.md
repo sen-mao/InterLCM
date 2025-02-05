@@ -76,8 +76,6 @@ conda install -c conda-forge dlib (only for face detection or cropping with dlib
 ```
 # For cropped and aligned faces (512x512) (3-step interlcm reconstruction)
 python inference_InterLCM.py --has_aligned --num_inference_steps 4 \
-                             --visual_encoder_path weights/InterLCM/visual_encoder_3step.pth \
-                             --spatial_encoder_path weights/InterLCM/spatial_encoder_3step.pth \
                              --input_path inputs/cropped_faces \
                              --output_path results/cropped_faces
 ```
@@ -99,8 +97,6 @@ python inference_InterLCM.py --has_aligned --num_inference_steps 2 \
 # Add '--bg_upsampler realesrgan' to enhance the background regions with Real-ESRGAN
 # Add '--face_upsample' to further upsample restorated face with Real-ESRGAN
 python inference_InterLCM.py --num_inference_steps 4 \
-                             --visual_encoder_path weights/InterLCM/visual_encoder_3step.pth \
-                             --spatial_encoder_path weights/InterLCM/spatial_encoder_3step.pth \
                              --input_path inputs/whole_imgs \
                              --output_path results/whole_imgs \
                              --bg_upsampler realesrgan
