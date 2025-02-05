@@ -80,8 +80,8 @@ python inference_InterLCM.py --has_aligned --num_inference_steps 4 \
                              --output_path results/cropped_faces
 ```
 
+#### InterLCM enables 1-step BFR under non-extreme degradation conditions.
 ```
-# InterLCM enables 1-step BFR under non-extreme degradation conditions.
 # For cropped and aligned faces (512x512) (1-step interlcm reconstruction)
 python inference_InterLCM.py --has_aligned --num_inference_steps 2 \
                              --visual_encoder_path weights/InterLCM/visual_encoder_1step.pth \
