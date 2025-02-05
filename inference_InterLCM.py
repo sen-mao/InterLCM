@@ -2,6 +2,7 @@ import os
 import cv2
 import argparse
 import glob
+import re
 import torch
 from torchvision.transforms.functional import normalize
 from basicsr.utils import imwrite, img2tensor, tensor2img
@@ -68,7 +69,7 @@ def main():
 
     parser.add_argument('-i', '--input_path', type=str, default='./inputs/whole_imgs', 
             help='Input image, video or folder. Default: inputs/whole_imgs')
-    parser.add_argument('-o', '--output_path', type=str, default=None, 
+    parser.add_argument('-o', '--output_path', type=str, default="results",
             help='Output folder. Default: results/<input_name>')
     parser.add_argument('-s', '--upscale', type=int, default=2, 
             help='The final upsampling scale of the image. Default: 2')
@@ -86,12 +87,12 @@ def main():
     parser.add_argument('--suffix', type=str, default=None, help='Suffix of the restored faces. Default: None')
     parser.add_argument('--save_video_fps', type=float, default=None, help='Frame rate for saving video. Default: None')
     # LCM
-    parser.add_argument('--num_inference_steps', type=int, default=4, help='T for lcm')
+    parser.add_argument('--num_inference_steps', type=int, default=2, help='T for lcm')
     parser.add_argument('--visual_encoder_path', type=str,
-                        default='weights/InterLCM/Step/visual_encoder_15000.pth',
+                        default='weights/InterLCM/visual_encoder_1step.pth',
                         help='visual_encoder checkpoint')
     parser.add_argument('--spatial_encoder_path', type=str,
-                        default='weights/InterLCM/Step/spatial_encoder_15000.pth',
+                        default='weights/InterLCM/spatial_encoder_1step.pth',
                         help='spatial_encoder checkpoint')
     parser.add_argument('--sd_path', type=str,
                         default='/data/runwayml/stable-diffusion-v1-5',
@@ -111,10 +112,11 @@ def main():
     args = parser.parse_args()
     print(args)
 
+    interlcm_step = int(re.findall(r'\d+', args.visual_encoder_path)[0])
     args.output_path = args.output_path.replace(args.output_path.split('/')[0],
-                                                f"{args.output_path.split('/')[0]}[{args.colorfix_type}]/Step{args.num_inference_steps}")
-    args.visual_encoder_path = args.visual_encoder_path.replace("Step", f"Step{args.num_inference_steps}")
-    args.spatial_encoder_path = args.spatial_encoder_path.replace("Step", f"Step{args.num_inference_steps}")
+                                                f"{args.output_path.split('/')[0]}[{args.colorfix_type}]/interlcm_{interlcm_step}step")
+
+    assert args.num_inference_steps - 1 == interlcm_step
 
     # ------------------------ input & output ------------------------
     input_video = False
