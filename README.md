@@ -120,6 +120,15 @@ python inference_InterLCM.py --num_inference_steps 4 \
 
 ---
 
+### Citation
+If our work is useful for your research, please consider citing:
+
+    @inproceedings{li2025interlcm,
+      title={InterLCM: Low-Quality Images as Intermediate States of Latent Consistency Models for Effective Blind Face Restoration},
+      author={Li, Senmao and Wang, Kai and van de Weijer, Joost and Khan, Fahad Shahbaz and Guo, Chun-Le and Yang, Shiqi and Wang, Yaxing and Yang, Jian and Cheng, Ming-Ming},
+      booktitle={ICLR},
+      year={2025}
+    }
 
 ### License
 
