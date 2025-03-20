@@ -95,10 +95,10 @@ def main():
                         default='weights/InterLCM/spatial_encoder_3step.pth',
                         help='spatial_encoder checkpoint')
     parser.add_argument('--sd_path', type=str,
-                        default='/data/runwayml/stable-diffusion-v1-5',
+                        default='runwayml/stable-diffusion-v1-5',
                         help='sd pre-trined model')
     parser.add_argument('--lcm_path', type=str,
-                        default='/data/SimianLuo/LCM_Dreamshaper_v7',
+                        default='SimianLuo/LCM_Dreamshaper_v7',
                         help='lcm pre-trined model')
 
     parser.add_argument(
