@@ -170,7 +170,7 @@ def main():
     # ------------------ set up InterLCM restorer -------------------
 
     # CLIPImageEncoder
-    clip_model, clip_preprocess = clip.load('ViT-B/16')
+    clip_model, clip_preprocess = clip.load('ViT-B/16', device=device)
     preprocess = transforms.Compose([transforms.Normalize(mean=[-1.0, -1.0, -1.0], std=[2.0, 2.0, 2.0])] +  # Un-normalize from [-1.0, 1.0] (GAN output) to [0, 1].
                                     clip_preprocess.transforms[:2] +  # to match CLIP input scale assumptions
                                     clip_preprocess.transforms[4:])  # + skip convert PIL to tensor
