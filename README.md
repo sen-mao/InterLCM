@@ -4,7 +4,7 @@
 [Project Page](https://sen-mao.github.io/InterLCM-Page/)
 
 [//]: # ([![Hugging Face coming soon]&#40;https://img.shields.io/badge/Demo-%F0%9F%A4%97%20Hugging%20Face-blue&#41;]&#40;https://github.com/sen-mao/InterLCM&#41; )
-[![arXiv](https://img.shields.io/badge/arXiv-InterLCM-<COLOR>.svg)](https://arxiv.org/abs/2502.02215) [![arXiv](https://img.shields.io/badge/paper-InterLCM-b31b1b.svg)](https://arxiv.org/pdf/2502.02215) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=sen-mao/InterLCM) [![gradio](assets/gradio.svg)](https://2lq8im394062.vicp.fun/) [![gradio](https://gradio.app/assets/gradio.svg)](https://gradio.app/)
+[![arXiv](https://img.shields.io/badge/arXiv-InterLCM-<COLOR>.svg)](https://arxiv.org/abs/2502.02215) [![arXiv](https://img.shields.io/badge/paper-InterLCM-b31b1b.svg)](https://arxiv.org/pdf/2502.02215) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=sen-mao/InterLCM)  [![gradio](https://img.shields.io/badge/Demo-%F0%9F%A4%97%20Hugging%20Face-blue)](https://2lq8im394062.vicp.fun/)
 
 
 [Senmao Li](https://sen-mao.github.io/)<sup>1,2*</sup>, [Kai Wang](https://wangkai930418.github.io/)<sup>2†</sup>, [Joost van de Weijer](https://scholar.google.com/citations?user=Gsw2iUEAAAAJ&hl=en)<sup>2</sup>, [Fahad Shahbaz Khan](https://sites.google.com/view/fahadkhans/home)<sup>3,4</sup>, [Chun-Le Guo](https://mmcheng.net/clguo/)<sup>1</sup>, [Shiqi Yang](https://www.shiqiyang.xyz/)<sup>5</sup>, [Yaxing Wang](https://scholar.google.es/citations?user=6CsB8k0AAAAJ&hl=en)<sup>1</sup>, [jian Yang](https://scholar.google.com.hk/citations?user=6CIDtZQAAAAJ)<sup>1</sup>, [Ming-Ming Cheng](https://mmcheng.net/cmm/)<sup>1</sup>  
