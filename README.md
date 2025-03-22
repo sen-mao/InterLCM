@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="assets/interlcm_logo.jpg" height=110>
+</p>
 
 ## Official Implementations "InterLCM: Low-Quality Images as Intermediate States of Latent Consistency Models for Effective Blind Face Restoration" (ICLR'25)
 
