@@ -48,11 +48,11 @@
 
 <img src="assets/colorization.jpg" width="800px"/>
 
-[//]: # ()
-[//]: # (#### Face Inpainting)
 
-[//]: # ()
-[//]: # (<img src="assets/inpainting_result1.png" width="400px"/> <img src="assets/inpainting_result2.png" width="400px"/>)
+#### Face Inpainting
+
+
+<img src="assets/inpainting.jpg" width="800px"/>
 
 
 
@@ -116,11 +116,22 @@ python inference_InterLCM.py --num_inference_steps 4 \
 
 ```
 # For cropped and aligned faces (512x512) (1-step interlcm colorization)
-python inference_InterLCM.py --has_aligned --num_inference_steps 2 \
+python inference_InterLCM.py --has_aligned --num_inference_steps 2 --colorfix_type nofix \
                              --visual_encoder_path weights/InterLCM/visual_encoder_colorization_1step.pth \
                              --spatial_encoder_path weights/InterLCM/spatial_encoder_colorization_1step.pth \
                              --input_path inputs/gray_faces \
                              --output_path results/gray_faces
+```
+
+#### 4. 🎭 Face Inpainting
+
+```
+# For cropped and aligned faces (512x512) (1-step interlcm inpainting)
+python inference_InterLCM.py --has_aligned --num_inference_steps 2 --colorfix_type nofix \
+                             --visual_encoder_path weights/InterLCM/visual_encoder_inpainting_1step.pth \
+                             --spatial_encoder_path weights/InterLCM/spatial_encoder_inpainting_1step.pth \
+                             --input_path inputs/masked_faces \
+                             --output_path results/masked_faces
 ```
 
 ---
