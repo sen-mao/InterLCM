@@ -112,6 +112,16 @@ python inference_InterLCM.py --num_inference_steps 4 \
                              --bg_upsampler realesrgan
 ```
 
+#### 3. 🎨 Face Colorization
+
+```
+# For cropped and aligned faces (512x512) (1-step interlcm colorization)
+python inference_InterLCM.py --has_aligned --num_inference_steps 2 \
+                             --visual_encoder_path weights/InterLCM/visual_encoder_colorization_1step.pth \
+                             --spatial_encoder_path weights/InterLCM/spatial_encoder_colorization_1step.pth \
+                             --input_path inputs/gray_faces \
+                             --output_path results/gray_faces
+```
 
 ---
 
