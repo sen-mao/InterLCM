@@ -44,10 +44,9 @@
 
 <img src="assets/face_restoration_result2.jpg" width="800px"/>
 
-[//]: # (#### Face Color Enhancement and Restoration)
+#### Face Colorization
 
-[//]: # ()
-[//]: # (<img src="assets/color_enhancement_result1.png" width="400px"/> <img src="assets/color_enhancement_result2.png" width="400px"/>)
+<img src="assets/colorization.jpg" width="800px"/>
 
 [//]: # ()
 [//]: # (#### Face Inpainting)
