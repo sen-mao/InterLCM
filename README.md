@@ -29,6 +29,14 @@
 - **2025.01.15**: Release the [pre-trained models](https://github.com/sen-mao/InterLCM/releases/tag/v0.1.0) and inference code. 😀
 - **2024.12.24**: This repo is created.
 
+---
+
+#### 🤗 Gradio Demo [![gradio](https://img.shields.io/badge/Demo-%F0%9F%A4%97%20Gradio-blue)](https://2lq8im394062.vicp.fun/)
+
+<img src="assets/interlcm_gradio.gif" width="800px"/>
+
+---
+
 #### Face Restoration (synthetic of CelebA-Test)
 
 <img src="assets/face_restoration_result1.jpg" width="800px"/>
