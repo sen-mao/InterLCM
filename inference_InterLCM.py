@@ -236,6 +236,8 @@ def main():
             face_helper.is_gray = is_gray(img, threshold=10)
             if face_helper.is_gray:
                 print('Grayscale input: True')
+                if 'colorization' in args.visual_encoder_path:
+                    face_helper.is_gray = False
             face_helper.cropped_faces = [img]
         else:
             face_helper.read_image(img)
