@@ -31,7 +31,7 @@
 
 ---
 
-#### 🤗 Gradio Demo [![gradio](https://img.shields.io/badge/Demo-%F0%9F%A4%97%20Gradio-blue)](https://2lq8im394062.vicp.fun/)
+#### Gradio Demo [![gradio](https://img.shields.io/badge/Demo-%F0%9F%A4%97%20Gradio-blue)](https://2lq8im394062.vicp.fun/)
 
 <img src="assets/interlcm_gradio.gif" width="800px"/>
 
