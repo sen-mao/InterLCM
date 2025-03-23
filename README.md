@@ -35,7 +35,6 @@
 
 <img src="assets/interlcm_gradio.gif" width="800px"/>
 
----
 
 #### Face Restoration (synthetic of CelebA-Test)
 
